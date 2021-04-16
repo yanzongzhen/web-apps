@@ -3,7 +3,7 @@ module.exports = function(grunt) {
         defaultConfig,
         packageFile;
 
-    const copyrightHeader = 'Copyright (c) Ascensio System SIA <%= grunt.template.today("yyyy") %>. All rights reserved'
+    const copyrightHeader = 'Copyright (c) Boom <%= grunt.template.today("yyyy") %>. All rights reserved'
     var copyright = '/*\n' +
                     ' * ' + (process.env['APP_COPYRIGHT'] || copyrightHeader) + '\n' +
                     ' *\n' +
@@ -15,34 +15,34 @@ module.exports = function(grunt) {
     var jsreplacements = [
                 {
                     from: /\{\{SUPPORT_EMAIL\}\}/g,
-                    to: process.env['SUPPORT_EMAIL'] || 'support@onlyoffice.com'
+                    to: process.env['SUPPORT_EMAIL'] || 'support@boom.cn'
                 },{
                     from: /\{\{SUPPORT_URL\}\}/g,
-                    to: process.env['SUPPORT_URL'] || 'https://support.onlyoffice.com'
+                    to: process.env['SUPPORT_URL'] || 'https://boom.cn'
                 },{
                     from: /\{\{SALES_EMAIL\}\}/g,
-                    to: process.env['SALES_EMAIL'] || 'sales@onlyoffice.com'
+                    to: process.env['SALES_EMAIL'] || 'boomsales@boom.cn'
                 },{
                     from: /\{\{PUBLISHER_URL\}\}/g,
-                    to: process.env['PUBLISHER_URL'] || 'https://www.onlyoffice.com'
+                    to: process.env['PUBLISHER_URL'] || 'https://boom.cn'
                 },{
                     from: /\{\{PUBLISHER_PHONE\}\}/,
-                    to: process.env['PUBLISHER_PHONE'] || '+371 660-16425'
+                    to: process.env['PUBLISHER_PHONE'] || '+86 400-058-2650'
                 },{
                     from: /\{\{PUBLISHER_NAME\}\}/g,
-                    to: process.env['PUBLISHER_NAME'] || 'Ascensio System SIA'
+                    to: process.env['PUBLISHER_NAME'] || 'Boom'
                 },{
                     from: /\{\{PUBLISHER_ADDRESS\}\}/,
-                    to: process.env['PUBLISHER_ADDRESS'] || '20A-12 Ernesta Birznieka-Upisha street, Riga, Latvia, EU, LV-1050'
+                    to: process.env['PUBLISHER_ADDRESS'] || 'Boom, China'
                 },{
                     from: /\{\{API_URL_EDITING_CALLBACK\}\}/,
-                    to: process.env['API_URL_EDITING_CALLBACK'] || 'https://api.onlyoffice.com/editors/callback'
+                    to: process.env['API_URL_EDITING_CALLBACK']
                 },{
                     from: /\{\{COMPANY_NAME\}\}/g,
-                    to: process.env['COMPANY_NAME'] || 'ONLYOFFICE'
+                    to: process.env['COMPANY_NAME'] || 'Boom'
                 }, {
                     from: /\{\{APP_TITLE_TEXT\}\}/g,
-                    to: process.env['APP_TITLE_TEXT'] || 'ONLYOFFICE'
+                    to: process.env['APP_TITLE_TEXT'] || 'BoomEditor'
                 }, {
                     from: /\{\{HELP_URL\}\}/g,
                     to: process.env['HELP_URL'] || 'https://helpcenter.onlyoffice.com'
